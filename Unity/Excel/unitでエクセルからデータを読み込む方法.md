@@ -1,6 +1,6 @@
 # unity-excel-importerの使い方
 
-[unity-excel-importer](https://github.com/mikito/unity-excel-importer)の置き場所
+[unity-excel-importer](https://github.com/mikito/unity-excel-importer)はこちらからダウンロードします。
 
 1. エクセルを作成。
 1. シート名はエクセルファイル名と違う名前にする（必ず設定）。
