@@ -162,7 +162,6 @@ ul.memo-list li {
   padding: 1.5rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
@@ -170,6 +169,35 @@ ul.memo-list li {
 .game-card:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.04);
+}
+
+/* ゲームアイコン画像エリア */
+.game-icon-container {
+  width: 100%;
+  height: 140px;
+  background-color: var(--bg-color);
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.game-icon {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 縦横比を崩さずエリア全体にフィット */
+}
+
+/* 画像が存在しない場合のフォールバック（絵文字表示） */
+.game-icon-placeholder {
+  font-size: 2.5rem;
+  opacity: 0.5;
+}
+
+.game-info {
+  flex-grow: 1;
 }
 
 .game-card h3 {
@@ -183,7 +211,6 @@ ul.memo-list li {
   font-size: 0.9rem;
   color: var(--sub-text);
   margin-bottom: 1.2rem;
-  flex-grow: 1;
 }
 
 /* ==================================================
