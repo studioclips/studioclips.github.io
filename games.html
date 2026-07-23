@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>実行できるゲーム - Studio Clipd</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Studio Clipd ホームページ</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">ホーム</a></li>
+      <li><a href="profile.html">プロフィール</a></li>
+      <li><a href="memo.html">覚書</a></li>
+      <li><a href="games.html" class="active">実行できるゲーム</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section class="card">
+      <h2>実行できるゲーム</h2>
+      <p>以下のリンクから、ブラウザ上で直接プレイできる作品を起動できます。</p>
+    </section>
+
+    <!-- ゲーム一覧 -->
+    <div class="game-grid">
+
+      <!-- ゲームカード 1 -->
+      <article class="game-card">
+        <div>
+          <h3>ゲームタイトル A</h3>
+          <p>簡単な説明文をここに入力します。（例：Unity WebGLで作成したアクションパズル）</p>
+        </div>
+        <a href="Games/GameA/index.htm" class="btn" target="_blank" rel="noopener">ゲームを起動する</a>
+      </article>
+
+      <!-- ゲームカード 2 -->
+      <article class="game-card">
+        <div>
+          <h3>ゲームタイトル B</h3>
+          <p>ゲームの概要や操作方法などのちょっとしたメモを記述できます。</p>
+        </div>
+        <a href="Games/GameB/index.htm" class="btn" target="_blank" rel="noopener">ゲームを起動する</a>
+      </article>
+
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; Studio Clipd All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,200 @@
+@charset "UTF-8";
+
+/* ==================================================
+   カラー変数・全体設定
+   ================================================== */
+:root {
+  --bg-color: #f7f5f0;        /* 優しい生成り色 */
+  --card-bg: #ffffff;         /* カード・ヘッダーの白 */
+  --text-color: #5a524c;      /* 濃いめの落ち着いたブラウン */
+  --sub-text: #8c827a;        /* 補足テキスト用グレー */
+  --accent-color: #b5c7bc;    /* 淡いセージグリーン */
+  --accent-hover: #9bb3a3;    /* ホバー時の少し濃いグリーン */
+  --border-color: #e5e0d8;    /* 柔らかい境界線 */
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", MeiRyo, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.8;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ==================================================
+   ヘッダー・ナビゲーション
+   ================================================== */
+header {
+  background-color: var(--card-bg);
+  border-bottom: 1px solid var(--border-color);
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 1.8rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+}
+
+nav {
+  background-color: var(--card-bg);
+  border-bottom: 1px solid var(--border-color);
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+nav li a {
+  display: block;
+  padding: 1rem 1.5rem;
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: 0.95rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav li a:hover,
+nav li a.active {
+  background-color: var(--accent-color);
+  color: #ffffff;
+}
+
+/* ==================================================
+   メインコンテンツレイアウト
+   ================================================== */
+main {
+  flex: 1;
+  max-width: 800px;
+  width: 100%;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+}
+
+.card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 2rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+}
+
+.card h2 {
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin-bottom: 0.8rem;
+  color: var(--text-color);
+  border-left: 4px solid var(--accent-color);
+  padding-left: 0.5rem;
+}
+
+.card p {
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+.card p:last-child {
+  margin-bottom: 0;
+}
+
+/* ボタン共通クラス */
+.btn {
+  display: inline-block;
+  text-align: center;
+  padding: 0.6rem 1.2rem;
+  background-color: var(--accent-color);
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: var(--accent-hover);
+}
+
+/* ボタンのコンテナ */
+.btn-group {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+/* ==================================================
+   覚書（Memo）用スタイル
+   ================================================== */
+ul.memo-list {
+  padding-left: 1.2rem;
+}
+
+ul.memo-list li {
+  margin-bottom: 0.5rem;
+}
+
+/* ==================================================
+   実行できるゲーム（Games）用スタイル
+   ================================================== */
+.game-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.game-card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.game-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.04);
+}
+
+.game-card h3 {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: var(--text-color);
+}
+
+.game-card p {
+  font-size: 0.9rem;
+  color: var(--sub-text);
+  margin-bottom: 1.2rem;
+  flex-grow: 1;
+}
+
+/* ==================================================
+   フッター
+   ================================================== */
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 0.8rem;
+  color: var(--sub-text);
+  border-top: 1px solid var(--border-color);
+  background-color: var(--card-bg);
+  margin-top: auto;
+}
